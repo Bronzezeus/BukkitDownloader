@@ -67,7 +67,108 @@ public class Main {
 	/**
 	 * Initialize the contents of the frame.
 	 */
+	@SuppressWarnings("deprecation")
 	private void initialize() {
+		if(!NonblockingCharacterIterator.checkdir("./config/")){
+			 boolean status;
+			 status = new File("./config/").mkdir();
+			 System.out.println(status);
+			 try{
+				    // Create file 
+				    FileWriter fstream = new FileWriter("./config/plugins.prop");
+				        BufferedWriter out = new BufferedWriter(fstream);
+				        URL u;
+				        u = new URL("http://dl.dropbox.com/u/7737298/plugins.txt");
+				        InputStream is = null;
+				        DataInputStream dis;
+				        String s;
+
+				        try {
+				           
+				           is = u.openStream();
+				           dis = new DataInputStream(new BufferedInputStream(is));
+				           while ((s = dis.readLine()) != null) {
+				              System.out.println(s);
+				              out.write(s+""+System.getProperty("line.separator"));
+				           }
+
+				        } catch (MalformedURLException mue) {
+
+				           System.out.println("Ouch - a MalformedURLException happened.");
+				           mue.printStackTrace();
+				           System.exit(1);
+
+				        } catch (IOException ioe) {
+
+				           System.out.println("Oops- an IOException happened.");
+				           ioe.printStackTrace();
+				           System.exit(1);
+
+				        } finally {
+				           try {
+				              is.close();
+				           } catch (IOException ioe) {
+				              
+				           }
+
+				        } 
+				    
+
+				    out.close();
+				    }catch (Exception e){
+				      System.err.println("Error: " + e.getMessage());
+				    }
+		}else if(!NonblockingCharacterIterator.checkdir("./config/plugins.prop")){
+			
+			 try{
+				    // Create file 
+				    FileWriter fstream = new FileWriter("./config/plugins.prop");
+				        BufferedWriter out = new BufferedWriter(fstream);
+				        URL u;
+				        u = new URL("http://dl.dropbox.com/u/7737298/plugins.txt");
+				        InputStream is = null;
+				        DataInputStream dis;
+				        String s;
+
+				        try {
+				           
+				           is = u.openStream();
+				           dis = new DataInputStream(new BufferedInputStream(is));
+				           while ((s = dis.readLine()) != null) {
+				              System.out.println(s);
+				              out.write(s+""+System.getProperty("line.separator"));
+				           }
+
+				        } catch (MalformedURLException mue) {
+
+				           System.out.println("Ouch - a MalformedURLException happened.");
+				           mue.printStackTrace();
+				           System.exit(1);
+
+				        } catch (IOException ioe) {
+
+				           System.out.println("Oops- an IOException happened.");
+				           ioe.printStackTrace();
+				           System.exit(1);
+
+				        } finally {
+				           try {
+				              is.close();
+				           } catch (IOException ioe) {
+				              
+				           }
+
+				        } 
+				    
+
+				    out.close();
+				    }catch (Exception e){
+				      System.err.println("Error: " + e.getMessage());
+				    }
+			}
+		
+
+
 		frmBukkitDownloader = new JFrame();
 		frmBukkitDownloader.setTitle("Bukkit Downloader");
 		frmBukkitDownloader.setBounds(100, 100, 434, 411);
@@ -258,9 +359,9 @@ public class Main {
 		});
 		frmBukkitDownloader.getContentPane().add(btnRun, "cell 0 6,alignx center");
 		btnRun.setFont(new Font("Tahoma", Font.PLAIN, 18));
-		
+		}
 
-	}
+	
 
 	
 	static void print(String say) {
@@ -269,5 +370,5 @@ public class Main {
 }
 
 
-
+	
 
