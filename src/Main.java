@@ -35,6 +35,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
+import javax.swing.JInternalFrame;
 //import junit.framework.TestCase;
 
 public class Main {
@@ -173,7 +174,7 @@ public class Main {
 		frmBukkitDownloader.setTitle("Bukkit Downloader");
 		frmBukkitDownloader.setBounds(100, 100, 434, 411);
 		frmBukkitDownloader.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmBukkitDownloader.getContentPane().setLayout(new MigLayout("", "[524.00px,grow]", "[32px][41px,grow][][][][][]"));
+		frmBukkitDownloader.getContentPane().setLayout(new MigLayout("", "[524.00px,grow]", "[32px][41px,grow][][][][]"));
 		
 		JPanel panel = new JPanel();
 		frmBukkitDownloader.getContentPane().add(panel, "cell 0 0,alignx center,aligny top");
@@ -268,8 +269,29 @@ public class Main {
 		final JCheckBox chckbxBukkit_1 = new JCheckBox("Bukkit");
 		verticalBox_1.add(chckbxBukkit_1);
 		
+
+		
+		
+		
+
+		
+		
+		
+		//----------------------------------------------------------------------------------------------
+		
+		//checkboxarray[i] = new JCheckBox(checkBoxName[i]);
+		
+		
+		
+		//-----------------------------------------------------------------------------------------------------------------
+
+		
+		JLabel lblPlugins = new JLabel("Plugins");
+		lblPlugins.setHorizontalAlignment(SwingConstants.CENTER);
+		scrollPane_1.setColumnHeaderView(lblPlugins);
+		
 		JButton btnDownloadupdateBukkitcraftbukkit = new JButton("Download");
-		frmBukkitDownloader.getContentPane().add(btnDownloadupdateBukkitcraftbukkit, "cell 0 5,alignx center");
+		frmBukkitDownloader.getContentPane().add(btnDownloadupdateBukkitcraftbukkit, "cell 0 3,alignx center");
 		btnDownloadupdateBukkitcraftbukkit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -309,26 +331,18 @@ public class Main {
 		});
 		btnDownloadupdateBukkitcraftbukkit.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
-
-		
-		
-		
-
-		
-		
-		
-		//----------------------------------------------------------------------------------------------
-		
-		//checkboxarray[i] = new JCheckBox(checkBoxName[i]);
-		
-		
-		
-		//-----------------------------------------------------------------------------------------------------------------
-
-		
-		JLabel lblPlugins = new JLabel("Plugins");
-		lblPlugins.setHorizontalAlignment(SwingConstants.CENTER);
-		scrollPane_1.setColumnHeaderView(lblPlugins);
+		JButton btnNewButton = new JButton("Settings");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				//new SimpleTransactionCollector();
+				SimpleTransactionCollector frame = new SimpleTransactionCollector();
+				frame.setVisible(true);
+				System.out.println("opening");
+			}
+		});
+		frmBukkitDownloader.getContentPane().add(btnNewButton, "cell 0 4,alignx center");
 		
 		JButton btnRun = new JButton("Run");
 		btnRun.setEnabled(false);
@@ -357,7 +371,7 @@ public class Main {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		frmBukkitDownloader.getContentPane().add(btnRun, "cell 0 6,alignx center");
+		frmBukkitDownloader.getContentPane().add(btnRun, "cell 0 5,alignx center");
 		btnRun.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		}
 
