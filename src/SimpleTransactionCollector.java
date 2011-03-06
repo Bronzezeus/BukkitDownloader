@@ -165,6 +165,9 @@ if(NonblockingCharacterIterator.checkdir("./config/")){
 		    }
 }
 				    System.out.println(result);
+			           Main.frmBukkitDownloader.setVisible(false);
+			           Main.frmBukkitDownloader.dispose();
+			           Main.main(null);
 			}
 		});
 		GridBagConstraints gbc_btnChangePluginSource = new GridBagConstraints();

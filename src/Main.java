@@ -40,7 +40,7 @@ import javax.swing.JInternalFrame;
 
 public class Main {
 
-	private JFrame frmBukkitDownloader;
+	public static JFrame frmBukkitDownloader;
 
 	/**
 	 * Launch the application.

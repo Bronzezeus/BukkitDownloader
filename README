@@ -4,7 +4,7 @@ This is just a simple java GUI to download Bukkit/Craftbukkit (for minecraft) an
 
 Plugins are loaded from the plugins.prop file in the /config/ directory, it is auto created and updated from a centreal source when first run.
 You are free to add more plugins to make your own custom file, it should not be overwritten. I have added only one setting so far and that is to 
-redownload the plugins list from a different source, the source just has to be a a plain text file with not html or anything, reccomended places 
+redownload the plugins list from a different source, the source just has to be a a plain text file with no html or anything, recommended places 
 to store the file is dropbox or any other upload site that offers direct downloads and in browser view of text files. The best way to store 
 would be on your own web server.
 
