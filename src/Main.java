@@ -248,9 +248,9 @@ public class Main {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
-		final String []array = new String[3];
+		final String []array = new String[alkeys.size()];
 		alkeys.toArray(array);
-		final String []array2 = new String[3];
+		final String []array2 = new String[alurl.size()];
 		alurl.toArray(array2);
 		final JCheckBox []checkboxarray = new JCheckBox[array.length];
 		for(int i = 0; i < array.length; i++){

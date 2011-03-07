@@ -34,11 +34,12 @@ public class NonblockingCharacterIterator {
 			String ext = checkext(destinationDir+"\\"+localFileName);
 			System.out.println("Extension is: "+ext);
 
-			/*if(ext != "jar"){
-				System.out.println("do zip stuff");
+/*			if(ext != "jar"){
+				//System.out.println("do zip stuff");
+				print("is not jar");
 				if(ext == "zip"){
 					System.out.println("do zip stuff");
-					StatelessMutexAction.unzipthefile(destinationDir+"\\"+localFileName);
+					//StatelessMutexAction.unzipthefile(destinationDir+"\\"+localFileName);
 					
 				}
 			}*/
@@ -93,5 +94,9 @@ public class NonblockingCharacterIterator {
 	String ext = name.substring(pos);
 	 //System.out.println(ext);
 return ext;
+	}
+
+	static void print(String say) {
+		System.out.println(say);
 	}
 }
