@@ -174,7 +174,7 @@ public class Main {
 		frmBukkitDownloader.setTitle("Bukkit Downloader");
 		frmBukkitDownloader.setBounds(100, 100, 434, 411);
 		frmBukkitDownloader.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frmBukkitDownloader.getContentPane().setLayout(new MigLayout("", "[524.00px,grow]", "[32px][41px,grow][][][][]"));
+		frmBukkitDownloader.getContentPane().setLayout(new MigLayout("", "[524.00px,grow]", "[32px][41px,grow][][][]"));
 		
 		JPanel panel = new JPanel();
 		frmBukkitDownloader.getContentPane().add(panel, "cell 0 0,alignx center,aligny top");
@@ -291,7 +291,7 @@ public class Main {
 		scrollPane_1.setColumnHeaderView(lblPlugins);
 		
 		JButton btnDownloadupdateBukkitcraftbukkit = new JButton("Download");
-		frmBukkitDownloader.getContentPane().add(btnDownloadupdateBukkitcraftbukkit, "cell 0 3,alignx center");
+		frmBukkitDownloader.getContentPane().add(btnDownloadupdateBukkitcraftbukkit, "cell 0 2,alignx center");
 		btnDownloadupdateBukkitcraftbukkit.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
@@ -342,7 +342,7 @@ public class Main {
 				System.out.println("opening");
 			}
 		});
-		frmBukkitDownloader.getContentPane().add(btnNewButton, "cell 0 4,alignx center");
+		frmBukkitDownloader.getContentPane().add(btnNewButton, "cell 0 3,alignx center");
 		
 		JButton btnRun = new JButton("Run");
 		btnRun.setEnabled(false);
@@ -371,7 +371,7 @@ public class Main {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		frmBukkitDownloader.getContentPane().add(btnRun, "cell 0 5,alignx center");
+		frmBukkitDownloader.getContentPane().add(btnRun, "cell 0 4,alignx center");
 		btnRun.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		}
 
