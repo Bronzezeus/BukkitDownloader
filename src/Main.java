@@ -86,7 +86,7 @@ public class Main {
 
 				        try {
 				           
-				           is = u.openStream();
+				           is = u.openStream(); 
 				           dis = new DataInputStream(new BufferedInputStream(is));
 				           while ((s = dis.readLine()) != null) {
 				              System.out.println(s);
