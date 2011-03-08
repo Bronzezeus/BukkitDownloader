@@ -232,14 +232,14 @@ public class Main {
 			 // System.out.println("location = " + p.getProperty("DBlocation"));
 			  //for( propertyNames()
 			  for (Enumeration en = p.propertyNames(); en.hasMoreElements();) {
-				   String key = (String) en.nextElement(); 
+				   String key = (String) en.nextElement();  
 				   String location = p.getProperty(key);
 				   print(key);
 				   //print(location);
 				   alkeys.add(key); 
 				   alurl.add(location);
 			  }
-			  
+			   
 			  //p.list(System.out);
 		} catch (FileNotFoundException e2) {
 			// TODO Auto-generated catch block
